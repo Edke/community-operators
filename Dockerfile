@@ -1,6 +1,7 @@
 FROM registry.redhat.io/openshift4/ose-operator-registry:latest
 
-COPY nested-manifests manifests
+# COPY nested-manifests manifests
+COPY upstream-community-operators manifests
 RUN /bin/initializer -o ./bundles.db
 
 # RUN chgrp -R 0 /registry && \
